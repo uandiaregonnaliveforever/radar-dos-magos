@@ -81,16 +81,14 @@
   <g transform="translate(210 150) scale(1.32) translate(-210 -150)">
     <path d="M145 150 L152 92 Q170 80 188 92 L195 150 Z" fill="url(#iRoxo)" stroke="#3f2a7a" stroke-width="1.5"/>
     <g class="braco-e"><path d="M158 112 L130 88" stroke="#7a57cf" stroke-width="10" stroke-linecap="round"/><circle cx="128" cy="86" r="6" fill="#f2c9a5"/></g>
-    <image href="magos/rosto-1.png" x="145" y="32" width="50" height="62" preserveAspectRatio="xMidYMid slice" clip-path="url(#iCara1)"/>
-    <ellipse cx="170" cy="62" rx="23" ry="28" fill="none" stroke="rgba(0,0,0,.12)" stroke-width="1.5"/>
+    <image href="magos/rosto-1.png" x="139" y="26" width="62" height="75" preserveAspectRatio="xMidYMid meet"/>
     <path d="M170 -18 L196 42 L144 42 Z" fill="url(#iRoxo)" stroke="#3f2a7a" stroke-width="1.5" stroke-linejoin="round"/>
     <ellipse cx="170" cy="42" rx="32" ry="7" fill="#4a2f8f"/>
     <path class="brilho" d="M176 10 l2 5 5 2 -5 2 -2 5 -2 -5 -5 -2 5 -2z" fill="#ffe27a"/><circle cx="163" cy="26" r="2" fill="#ffe27a"/>
 
     <path d="M225 150 L232 92 Q250 80 268 92 L275 150 Z" fill="url(#iRosa)" stroke="#9c2d66" stroke-width="1.5"/>
     <g class="braco-d"><path d="M262 112 L292 88" stroke="#f06aad" stroke-width="10" stroke-linecap="round"/><circle cx="294" cy="86" r="6" fill="#f2c9a5"/><path d="M294 86 L312 64" stroke="#8a5a2b" stroke-width="3" stroke-linecap="round"/><path class="brilho" d="M313 54 l3 7 7 3 -7 3 -3 7 -3 -7 -7 -3 7 -3z" fill="#fff38a"/></g>
-    <image href="magos/rosto-2.png" x="225" y="32" width="50" height="62" preserveAspectRatio="xMidYMid slice" clip-path="url(#iCara2)"/>
-    <ellipse cx="250" cy="62" rx="23" ry="28" fill="none" stroke="rgba(0,0,0,.12)" stroke-width="1.5"/>
+    <image href="magos/rosto-2.png" x="219" y="31" width="62" height="67" preserveAspectRatio="xMidYMid meet"/>
     <path d="M254 -18 L276 42 L224 42 Z" fill="url(#iRosa)" stroke="#9c2d66" stroke-width="1.5" stroke-linejoin="round"/>
     <ellipse cx="250" cy="42" rx="32" ry="7" fill="#b8337a"/>
     <path class="brilho" d="M252 8 l2 5 5 2 -5 2 -2 5 -2 -5 -5 -2 5 -2z" fill="#ffe27a"/><circle cx="260" cy="26" r="2" fill="#ffe27a"/>
@@ -110,15 +108,12 @@
 </svg>
 <div class="titulo"><b>Radar dos Magos</b><span>Preparando a vassoura a jato…</span></div>
 </div>
-<button class="pular" type="button">Pular</button>
 <script>
 (function () {
   const el = document.getElementById("intro");
-  let viu = false; try { viu = sessionStorage.getItem("intro-viu") === "1"; } catch (e) {}
-  if (viu) { el.remove(); return; }
   const reduz = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   let acabou = false;
-  const fim = () => { if (acabou) return; acabou = true; try { sessionStorage.setItem("intro-viu", "1"); } catch (e) {} el.classList.add("fim"); setTimeout(() => el.remove(), 700); };
+  const fim = () => { if (acabou) return; acabou = true; el.classList.add("fim"); setTimeout(() => el.remove(), 700); };
   el.addEventListener("click", fim);
   const imgs = ["magos/rosto-1.png", "magos/rosto-2.png"].map(src => new Promise(ok => { const i = new Image(); i.onload = i.onerror = ok; i.src = src; }));
   const comeca = () => { if (el.classList.contains("vai")) return; el.classList.add("vai"); setTimeout(fim, reduz ? 1200 : 4600); };
