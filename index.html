@@ -3,7 +3,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#3fa9f5">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-title" content="Radar dos Magos">
+<meta name="apple-mobile-web-app-title" content="Portal dos Magos">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="icone-192.png">
 <link rel="apple-touch-icon" href="icone-180.png">
@@ -106,7 +106,7 @@
   <circle cx="398" cy="146" r="6" fill="#0e5aa8"/>
   <ellipse class="helice" cx="402" cy="146" rx="3.5" ry="30" fill="rgba(60,90,130,.55)"/>
 </svg>
-<div class="titulo"><b>Radar dos Magos</b><span>Preparando a vassoura a jato…</span></div>
+<div class="titulo"><b>Portal dos Magos</b><span>Preparando a vassoura a jato…</span></div>
 </div>
 <script>
 (function () {
@@ -118,6 +118,87 @@
   const imgs = ["magos/rosto-1.png", "magos/rosto-2.png"].map(src => new Promise(ok => { const i = new Image(); i.onload = i.onerror = ok; i.src = src; }));
   const comeca = () => { if (el.classList.contains("vai")) return; el.classList.add("vai"); setTimeout(fim, reduz ? 1200 : 4600); };
   Promise.all(imgs).then(comeca); setTimeout(comeca, 1500);
+})();
+</script>
+</div>
+
+<div id="portal">
+<style>
+#portal { position: fixed; inset: 0; z-index: 9000; overflow-y: auto; -webkit-overflow-scrolling: touch;
+  background: radial-gradient(ellipse 70% 40% at 85% 0%, #fffbe0 0 10%, rgba(255,251,224,0) 50%),
+    radial-gradient(ellipse 130% 45% at 50% 112%, #8fdc6a 0 50%, rgba(143,220,106,0) 51%),
+    linear-gradient(180deg, #5db8f0 0%, #a8dcff 55%, #e6f7ff 100%);
+  font-family: "Fredoka", "Lucida Grande", system-ui, sans-serif; color: #0b3d6b; }
+#portal[hidden] { display: none !important; }
+html.no-portal, html.no-portal body { overflow: hidden; }
+#portal .pt { min-height: 100%; max-width: 560px; margin: 0 auto; padding: calc(28px + env(safe-area-inset-top)) 18px calc(28px + env(safe-area-inset-bottom)); display: grid; align-content: center; gap: 22px; }
+#portal .topo { text-align: center; }
+#portal h1 { margin: 0; font-size: clamp(34px, 10vw, 48px); font-weight: 700; color: #0f6fd8; -webkit-text-stroke: 1px #0a56ad;
+  text-shadow: 0 2px 0 #fff, 0 3px 0 #bfe4ff, 0 8px 16px rgba(10,80,160,.35); line-height: 1.05; }
+#portal .sub { margin-top: 6px; font-size: 16px; font-weight: 600; color: #0b4a86; text-shadow: 0 1px 0 #fff; }
+#portal .grade { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+#portal .card { position: relative; aspect-ratio: 1 / 1.05; border-radius: 26px; padding: 16px 14px 14px; display: grid; grid-template-rows: 1fr auto; justify-items: center; align-items: center; text-align: center;
+  border: 1.5px solid rgba(255,255,255,.95); color: #fff; text-decoration: none; overflow: hidden;
+  box-shadow: 0 2px 0 rgba(255,255,255,.7) inset, 0 -10px 20px rgba(0,0,0,.08) inset, 0 14px 30px rgba(10,70,140,.28); }
+#portal .card::before { content: ""; position: absolute; left: 6%; right: 6%; top: 4%; height: 42%; border-radius: 20px 20px 50% 50% / 20px 20px 22% 22%;
+  background: linear-gradient(180deg, rgba(255,255,255,.75), rgba(255,255,255,.05)); pointer-events: none; }
+#portal .card svg { width: 58%; height: auto; filter: drop-shadow(0 4px 6px rgba(0,0,0,.2)); position: relative; }
+#portal .card b { position: relative; font-size: 19px; font-weight: 700; text-shadow: 0 1px 2px rgba(0,0,0,.3); line-height: 1.1; }
+#portal .viagens { background: linear-gradient(180deg, #a8dcff 0%, #4aa8f5 48%, #1a7fe0 52%, #3fa2f8 100%); cursor: pointer; }
+#portal .album { background: linear-gradient(180deg, #d9c6ff 0%, #9b7be6 48%, #6f4cc2 52%, #8c6ae0 100%); }
+#portal .datas { background: linear-gradient(180deg, #ffc6e2 0%, #ff7bbd 48%, #e24d95 52%, #f46aae 100%); }
+#portal .receitas { background: linear-gradient(180deg, #ffe0a8 0%, #ffb44a 48%, #f08a12 52%, #ffa733 100%); }
+#portal .breve { position: absolute; top: 10px; right: 10px; z-index: 1; font-size: 10.5px; font-weight: 700; letter-spacing: .02em; padding: 3px 9px; border-radius: 99px;
+  color: #0b3d6b; background: linear-gradient(180deg, #fff, #e6eef6); box-shadow: 0 1px 3px rgba(0,0,0,.2); }
+#portal .card.off { filter: saturate(.8); }
+#portal .viagens:active { transform: scale(.97); }
+@media (hover: hover) { #portal .viagens:hover { filter: brightness(1.06) saturate(1.1); transform: translateY(-2px); } }
+#portal .card { transition: transform .12s ease, filter .12s ease; -webkit-tap-highlight-color: transparent; }
+@media (prefers-reduced-motion: no-preference) {
+  #portal .card { animation: pentra .5s cubic-bezier(.2,.9,.3,1.2) both; }
+  #portal .card:nth-child(2) { animation-delay: .06s; } #portal .card:nth-child(3) { animation-delay: .12s; } #portal .card:nth-child(4) { animation-delay: .18s; }
+}
+@keyframes pentra { from { opacity: 0; transform: translateY(18px) scale(.94); } }
+.voltar-portal { font: 600 13px/1 "Fredoka", system-ui, sans-serif; padding: 8px 14px; cursor: pointer; flex: none; color: var(--ink); }
+</style>
+<div class="pt">
+  <div class="topo"><h1>Portal dos Magos</h1><div class="sub">Adriano &amp; Pietra</div></div>
+  <div class="grade">
+    <a class="card viagens" href="#destinos" id="card-viagens">
+      <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M6 36 L56 16 C61 14 62 19 58 21 L17 42 L8 41 Z M24 31 L17 17 L22 15 L36 27 Z" fill="#fff"/><path d="M8 52 H56" stroke="#fff" stroke-width="4" stroke-linecap="round" opacity=".85"/></svg>
+      <b>Viagens</b>
+    </a>
+    <div class="card album off" aria-disabled="true"><span class="breve">Em breve</span>
+      <svg viewBox="0 0 64 64" aria-hidden="true"><rect x="8" y="14" width="48" height="38" rx="7" fill="#fff"/><circle cx="23" cy="27" r="5" fill="#9b7be6"/><path d="M12 48 L27 34 L36 42 L44 35 L52 43 V48 Z" fill="#9b7be6"/><path d="M50 6 l2.4 5.6 5.6 2.4 -5.6 2.4 -2.4 5.6 -2.4 -5.6 -5.6 -2.4 5.6 -2.4z" fill="#fff38a"/></svg>
+      <b>Álbum dos Magos</b>
+    </div>
+    <div class="card datas off" aria-disabled="true"><span class="breve">Em breve</span>
+      <svg viewBox="0 0 64 64" aria-hidden="true"><rect x="8" y="12" width="48" height="44" rx="8" fill="#fff"/><rect x="8" y="12" width="48" height="12" rx="6" fill="#ffd1e8"/><path d="M20 7 V17 M44 7 V17" stroke="#fff" stroke-width="5" stroke-linecap="round"/><path d="M32 49 C22 42 18 37 18 32 C18 28 21 26 24 26 C28 26 30 29 32 31 C34 29 36 26 40 26 C43 26 46 28 46 32 C46 37 42 42 32 49 Z" fill="#e24d95"/></svg>
+      <b>Nossas Datas</b>
+    </div>
+    <div class="card receitas off" aria-disabled="true"><span class="breve">Em breve</span>
+      <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M22 14 C22 10 26 10 26 6 M32 14 C32 10 36 10 36 6 M42 14 C42 10 46 10 46 6" stroke="#fff" stroke-width="3" stroke-linecap="round" fill="none" opacity=".9"/><path d="M10 26 H54 V40 C54 50 46 56 36 56 H28 C18 56 10 50 10 40 Z" fill="#fff"/><rect x="6" y="21" width="52" height="7" rx="3.5" fill="#fff"/><path d="M4 32 H10 M54 32 H60" stroke="#fff" stroke-width="5" stroke-linecap="round"/><path d="M22 40 C26 44 38 44 42 40" stroke="#f08a12" stroke-width="3" fill="none" stroke-linecap="round"/></svg>
+      <b>Receitas Nossas</b>
+    </div>
+  </div>
+</div>
+<script>
+(function () {
+  const P = document.getElementById("portal");
+  const noPortal = () => { const h = location.hash.slice(1); return !h || h === "portal"; };
+  function sinc() { const on = noPortal(); P.hidden = !on; document.documentElement.classList.toggle("no-portal", on); if (!on) window.scrollTo(0, 0); }
+  window.addEventListener("hashchange", sinc);
+  document.getElementById("card-viagens").addEventListener("click", e => {
+    e.preventDefault(); let aba = "destinos"; try { aba = localStorage.getItem("aba-radar") || aba; } catch (x) {}
+    location.hash = aba; const t = document.getElementById("t-" + aba); if (t) t.click();
+  });
+  sinc();
+  document.addEventListener("DOMContentLoaded", () => {
+    const hd = document.querySelector(".wrap > header"); if (!hd) return;
+    const b = document.createElement("button"); b.type = "button"; b.className = "gel voltar-portal"; b.textContent = "‹ Portal";
+    b.addEventListener("click", () => { location.hash = "portal"; });
+    hd.prepend(b);
+  });
 })();
 </script>
 </div>
@@ -201,7 +282,7 @@
 })();
 
 </script>
-<title>Radar dos Magos</title>
+<title>Portal dos Magos</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Mukta:wght@400;700&display=swap">
