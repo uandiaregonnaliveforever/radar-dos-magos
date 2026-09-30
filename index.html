@@ -9,6 +9,124 @@
 <link rel="apple-touch-icon" href="icone-180.png">
 <style>*,*::before,*::after{box-sizing:border-box}html,body{margin:0}[hidden]{display:none!important}</style>
 </head><body>
+<div id="intro" aria-hidden="true">
+<style>
+#intro { position: fixed; inset: 0; z-index: 9999; overflow: hidden; display: grid; place-items: center; cursor: pointer;
+  background: radial-gradient(ellipse 80% 50% at 80% 8%, #fffbe0 0 12%, rgba(255,251,224,0) 45%), linear-gradient(180deg, #5db8f0 0%, #a8dcff 55%, #e6f7ff 100%);
+  transition: opacity .6s ease, visibility .6s; }
+#intro.fim { opacity: 0; visibility: hidden; }
+#intro .nuvem { position: absolute; background: #fff; border-radius: 99px; opacity: .9; filter: blur(.5px); box-shadow: 0 6px 18px rgba(40,120,200,.15); }
+#intro .nuvem::before, #intro .nuvem::after { content: ""; position: absolute; background: #fff; border-radius: 50%; }
+#intro .nuvem::before { width: 55%; height: 170%; left: 12%; bottom: 20%; }
+#intro .nuvem::after { width: 40%; height: 130%; right: 12%; bottom: 25%; }
+#intro .n1 { width: 150px; height: 40px; top: 16%; left: -20px; animation: inuv 9s linear infinite; }
+#intro .n2 { width: 110px; height: 30px; top: 68%; right: -10px; animation: inuv 7s linear infinite reverse; }
+#intro .n3 { width: 90px; height: 26px; top: 40%; left: 70%; animation: inuv 11s linear infinite; opacity: .7; }
+@keyframes inuv { from { transform: translateX(-30px); } to { transform: translateX(30px); } }
+#intro .palco { width: min(560px, 100vw); position: relative; }
+#intro svg.aviao { width: 100%; height: auto; overflow: visible; transform: translateX(-120vw); }
+#intro.vai svg.aviao { animation: ientra 1.1s cubic-bezier(.2,.9,.3,1.05) forwards, ibalanca 1.4s 1.1s ease-in-out 2 alternate, idecola 1.3s 3.4s cubic-bezier(.55,0,.9,.4) forwards; }
+@keyframes ientra { from { transform: translateX(-120vw) rotate(4deg); } to { transform: translateX(0) rotate(0); } }
+@keyframes ibalanca { from { transform: translateY(0) rotate(0); } to { transform: translateY(-10px) rotate(-1.5deg); } }
+@keyframes idecola { 0% { transform: translate(0, 0) rotate(0); } 25% { transform: translate(-4vw, 6px) rotate(3deg); } 100% { transform: translate(130vw, -75vh) rotate(-22deg) scale(.75); } }
+#intro .braco-e { transform-origin: 158px 112px; }
+#intro .braco-d { transform-origin: 262px 112px; }
+#intro.vai .braco-e { animation: iacena .35s 1.2s ease-in-out 6 alternate; }
+#intro.vai .braco-d { animation: iacena2 .35s 1.35s ease-in-out 6 alternate; }
+@keyframes iacena { from { transform: rotate(0); } to { transform: rotate(-38deg); } }
+@keyframes iacena2 { from { transform: rotate(0); } to { transform: rotate(38deg); } }
+#intro .helice { transform-origin: 392px 146px; animation: igira .12s linear infinite; }
+@keyframes igira { from { transform: scaleY(1); } 50% { transform: scaleY(.15); } to { transform: scaleY(1); } }
+#intro .rastro { opacity: 0; }
+#intro.vai .rastro { animation: irastro 1.4s 3.3s ease-out forwards; }
+@keyframes irastro { 0% { opacity: 0; } 20% { opacity: 1; } 100% { opacity: 0; } }
+#intro .brilho { animation: ibrilha 1.2s ease-in-out infinite alternate; transform-box: fill-box; transform-origin: center; }
+@keyframes ibrilha { from { opacity: .3; transform: scale(.6) rotate(0); } to { opacity: 1; transform: scale(1.1) rotate(40deg); } }
+#intro .titulo { text-align: center; margin-top: 10px; font-family: "Fredoka", "Lucida Grande", system-ui, sans-serif; opacity: 0; }
+#intro.vai .titulo { animation: ititulo .6s .5s ease-out forwards, isome .5s 3.4s ease-in forwards; }
+@keyframes ititulo { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+@keyframes isome { to { opacity: 0; transform: translateY(-10px); } }
+#intro .titulo b { display: block; font-size: clamp(30px, 8vw, 44px); font-weight: 700; color: #0f6fd8; -webkit-text-stroke: 1px #0a56ad;
+  text-shadow: 0 2px 0 #fff, 0 3px 0 #bfe4ff, 0 6px 12px rgba(10,80,160,.35); }
+#intro .titulo span { display: block; margin-top: 4px; font-size: 15px; font-weight: 600; color: #0b4a86; text-shadow: 0 1px 0 #fff; }
+#intro .pular { position: absolute; right: 16px; bottom: calc(18px + env(safe-area-inset-bottom)); font: 600 13px/1 "Fredoka", system-ui, sans-serif; color: #0b4a86;
+  padding: 9px 16px; border-radius: 99px; border: 1px solid rgba(0,40,90,.25); background: linear-gradient(180deg, #fff, #e3edf7); box-shadow: 0 2px 6px rgba(10,70,140,.2); }
+@media (prefers-reduced-motion: reduce) {
+  #intro.vai svg.aviao { animation: none; transform: none; }
+  #intro.vai .titulo { animation: none; opacity: 1; }
+}
+</style>
+<i class="nuvem n1"></i><i class="nuvem n2"></i><i class="nuvem n3"></i>
+<div class="palco">
+<svg class="aviao" viewBox="0 -78 420 318" role="img" aria-label="Dois magos voando num avião">
+  <defs>
+    <linearGradient id="iFus" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset=".45" stop-color="#eaf5ff"/><stop offset=".5" stop-color="#cfe6fb"/><stop offset="1" stop-color="#e8f4ff"/></linearGradient>
+    <linearGradient id="iAzul" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#a8dcff"/><stop offset=".48" stop-color="#4aa8f5"/><stop offset=".52" stop-color="#1a7fe0"/><stop offset="1" stop-color="#3fa2f8"/></linearGradient>
+    <linearGradient id="iRoxo" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9b7be6"/><stop offset="1" stop-color="#5b3ea6"/></linearGradient>
+    <linearGradient id="iRosa" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ff9ccf"/><stop offset="1" stop-color="#d94a93"/></linearGradient>
+    <clipPath id="iCara1"><ellipse cx="170" cy="62" rx="23" ry="28"/></clipPath>
+    <clipPath id="iCara2"><ellipse cx="250" cy="62" rx="23" ry="28"/></clipPath>
+  </defs>
+  <!-- rastro de estrelinhas -->
+  <g class="rastro" fill="#fff8c8">
+    <path d="M-60 170 H40" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-dasharray="3 14" opacity=".9"/>
+    <path d="M0 150 l4 10 10 4 -10 4 -4 10 -4 -10 -10 -4 10 -4z"/><path d="M-40 185 l3 7 7 3 -7 3 -3 7 -3 -7 -7 -3 7 -3z"/><path d="M20 195 l3 6 6 3 -6 3 -3 6 -3 -6 -6 -3 6 -3z"/>
+  </g>
+  <!-- asa de trás -->
+  <path d="M190 170 L150 215 L185 215 L245 172 Z" fill="url(#iAzul)" stroke="#0e5aa8" stroke-width="2" stroke-linejoin="round"/>
+  <!-- cauda -->
+  <path d="M60 140 L40 80 L68 80 L110 132 Z" fill="url(#iAzul)" stroke="#0e5aa8" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M52 150 L20 138 L24 128 L70 138 Z" fill="url(#iAzul)" stroke="#0e5aa8" stroke-width="2" stroke-linejoin="round"/>
+  <!-- magos (atrás da fuselagem até a cintura) -->
+  <g transform="translate(210 150) scale(1.32) translate(-210 -150)">
+    <path d="M145 150 L152 92 Q170 80 188 92 L195 150 Z" fill="url(#iRoxo)" stroke="#3f2a7a" stroke-width="1.5"/>
+    <g class="braco-e"><path d="M158 112 L130 88" stroke="#7a57cf" stroke-width="10" stroke-linecap="round"/><circle cx="128" cy="86" r="6" fill="#f2c9a5"/></g>
+    <image href="magos/rosto-1.png" x="145" y="32" width="50" height="62" preserveAspectRatio="xMidYMid slice" clip-path="url(#iCara1)"/>
+    <ellipse cx="170" cy="62" rx="23" ry="28" fill="none" stroke="rgba(0,0,0,.12)" stroke-width="1.5"/>
+    <path d="M170 -18 L196 42 L144 42 Z" fill="url(#iRoxo)" stroke="#3f2a7a" stroke-width="1.5" stroke-linejoin="round"/>
+    <ellipse cx="170" cy="42" rx="32" ry="7" fill="#4a2f8f"/>
+    <path class="brilho" d="M176 10 l2 5 5 2 -5 2 -2 5 -2 -5 -5 -2 5 -2z" fill="#ffe27a"/><circle cx="163" cy="26" r="2" fill="#ffe27a"/>
+
+    <path d="M225 150 L232 92 Q250 80 268 92 L275 150 Z" fill="url(#iRosa)" stroke="#9c2d66" stroke-width="1.5"/>
+    <g class="braco-d"><path d="M262 112 L292 88" stroke="#f06aad" stroke-width="10" stroke-linecap="round"/><circle cx="294" cy="86" r="6" fill="#f2c9a5"/><path d="M294 86 L312 64" stroke="#8a5a2b" stroke-width="3" stroke-linecap="round"/><path class="brilho" d="M313 54 l3 7 7 3 -7 3 -3 7 -3 -7 -7 -3 7 -3z" fill="#fff38a"/></g>
+    <image href="magos/rosto-2.png" x="225" y="32" width="50" height="62" preserveAspectRatio="xMidYMid slice" clip-path="url(#iCara2)"/>
+    <ellipse cx="250" cy="62" rx="23" ry="28" fill="none" stroke="rgba(0,0,0,.12)" stroke-width="1.5"/>
+    <path d="M254 -18 L276 42 L224 42 Z" fill="url(#iRosa)" stroke="#9c2d66" stroke-width="1.5" stroke-linejoin="round"/>
+    <ellipse cx="250" cy="42" rx="32" ry="7" fill="#b8337a"/>
+    <path class="brilho" d="M252 8 l2 5 5 2 -5 2 -2 5 -2 -5 -5 -2 5 -2z" fill="#ffe27a"/><circle cx="260" cy="26" r="2" fill="#ffe27a"/>
+  </g>
+  <!-- fuselagem -->
+  <path d="M50 128 Q60 112 110 112 L330 112 Q392 112 396 146 Q392 180 330 180 L110 180 Q60 180 50 162 Z" fill="url(#iFus)" stroke="#6a9cc8" stroke-width="2.2"/>
+  <path d="M70 150 L380 150" stroke="url(#iAzul)" stroke-width="9" stroke-linecap="round"/>
+  <path d="M100 118 L330 118 Q368 118 380 132" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" opacity=".9"/>
+  <g fill="#7cc4f7" stroke="#2e7cc4" stroke-width="1.5"><circle cx="120" cy="134" r="6"/><circle cx="145" cy="134" r="6"/><circle cx="210" cy="134" r="6"/><circle cx="300" cy="134" r="6"/><circle cx="325" cy="134" r="6"/></g>
+  <path d="M352 122 Q378 124 386 140 L356 140 Z" fill="#7cc4f7" stroke="#2e7cc4" stroke-width="1.5"/>
+  <!-- asa da frente -->
+  <path d="M200 160 L165 222 L205 222 L262 162 Z" fill="url(#iAzul)" stroke="#0e5aa8" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M206 166 L180 212" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".7"/>
+  <!-- hélice -->
+  <circle cx="398" cy="146" r="6" fill="#0e5aa8"/>
+  <ellipse class="helice" cx="402" cy="146" rx="3.5" ry="30" fill="rgba(60,90,130,.55)"/>
+</svg>
+<div class="titulo"><b>Radar dos Magos</b><span>Preparando a vassoura a jato…</span></div>
+</div>
+<button class="pular" type="button">Pular</button>
+<script>
+(function () {
+  const el = document.getElementById("intro");
+  let viu = false; try { viu = sessionStorage.getItem("intro-viu") === "1"; } catch (e) {}
+  if (viu) { el.remove(); return; }
+  const reduz = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  let acabou = false;
+  const fim = () => { if (acabou) return; acabou = true; try { sessionStorage.setItem("intro-viu", "1"); } catch (e) {} el.classList.add("fim"); setTimeout(() => el.remove(), 700); };
+  el.addEventListener("click", fim);
+  const imgs = ["magos/rosto-1.png", "magos/rosto-2.png"].map(src => new Promise(ok => { const i = new Image(); i.onload = i.onerror = ok; i.src = src; }));
+  const comeca = () => { if (el.classList.contains("vai")) return; el.classList.add("vai"); setTimeout(fim, reduz ? 1200 : 4600); };
+  Promise.all(imgs).then(comeca); setTimeout(comeca, 1500);
+})();
+</script>
+</div>
+
 <script>
 /* Camada do site: dados vêm de data/*.json (atualizados pelo robô) e a busca vai direto ao Kiwi.com */
 (function () {
