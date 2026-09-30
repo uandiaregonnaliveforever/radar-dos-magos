@@ -1,0 +1,20 @@
+{
+  "cabine": "Econômica",
+  "datas": "várias (consultar)",
+  "destino": "Madri",
+  "detalhe": "Comprando as milhas na promo da LATAM (até 02/10). Taxas não informadas.",
+  "encontrada_em": "2026-09-30T18:00:00-03:00",
+  "estimado": true,
+  "excepcional": false,
+  "fonte": "Passageiro de Primeira",
+  "link": "https://passageirodeprimeira.com/latam-oferece-trecho-para-madri-a-partir-de-r-1-445-ou-58-mil-milhas-taxas/",
+  "notificado": false,
+  "pontos_texto": "58,9 mil milhas a R$ 26,60/milheiro",
+  "preco_normal": 4094,
+  "preco_obs": "+ taxas",
+  "preco_pessoa": 1567,
+  "status": "ativa",
+  "tipo": "pontos",
+  "titulo": "Madri com milhas LATAM",
+  "validade": "2026-10-02"
+}

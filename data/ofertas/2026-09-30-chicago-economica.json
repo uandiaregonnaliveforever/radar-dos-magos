@@ -1,0 +1,16 @@
+{
+  "cabine": "Econômica",
+  "datas": "18–25 fev 2027",
+  "destino": "Chicago",
+  "detalhe": "24% abaixo do normal da rota (R$ 6.274). Caiu há 12 dias. 18–25 fev.",
+  "encontrada_em": "2026-09-30T17:30:00-03:00",
+  "excepcional": false,
+  "fonte": "Google Voos",
+  "link": "https://www.google.com/travel/flights?q=Flights%20to%20ORD%20from%20SAO%20on%202027-02-18%20through%202027-02-25%20nonstop&hl=pt-BR&curr=BRL",
+  "notificado": false,
+  "preco_normal": 6274,
+  "preco_pessoa": 4773,
+  "status": "ativa",
+  "tipo": "dinheiro",
+  "titulo": "Chicago direto"
+}

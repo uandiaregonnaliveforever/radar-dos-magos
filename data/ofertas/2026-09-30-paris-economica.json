@@ -1,0 +1,16 @@
+{
+  "cabine": "Econômica",
+  "datas": "12 – 18 de nov.",
+  "destino": "Paris",
+  "detalhe": "7% abaixo do normal (R$ 5.300+). Meados de nov.",
+  "encontrada_em": "2026-09-30T16:10:00-03:00",
+  "excepcional": false,
+  "fonte": "Google Voos",
+  "link": "https://www.google.com/travel/flights?q=Flights%20to%20PAR%20from%20SAO%20on%202026-11-12%20through%202026-11-18%20nonstop&hl=pt-BR&curr=BRL",
+  "notificado": false,
+  "preco_normal": 5300,
+  "preco_pessoa": 4950,
+  "status": "ativa",
+  "tipo": "dinheiro",
+  "titulo": "Paris direto · Air France"
+}

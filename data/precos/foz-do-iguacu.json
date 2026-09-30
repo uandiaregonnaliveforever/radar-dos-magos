@@ -1,0 +1,21 @@
+{
+  "atualizado_em": "2026-09-30T18:30:00-03:00",
+  "cia": "Azul",
+  "duracao": "1h 45min",
+  "escalas": "Direto",
+  "fonte": "Kiwi.com",
+  "historico": [
+    {
+      "datas": "3 – 8 de dez.",
+      "escalas": "Direto",
+      "fonte": "Kiwi.com",
+      "preco": 813,
+      "t": "2026-09-30T18:30:00-03:00"
+    }
+  ],
+  "link_kiwi": "https://kiwi.com/u/vtt5py",
+  "nome": "Foz do Iguaçu",
+  "regiao": "Brasil",
+  "ultimas_datas": "3 – 8 de dez.",
+  "ultimo_preco": 813
+}

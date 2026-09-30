@@ -1,0 +1,45 @@
+{
+  "atualizado_em": "2026-09-30T20:31:24.924Z",
+  "cia": "LATAM Airlines",
+  "datas": "11 de mar. – 15 de mar.",
+  "escalas": "Direto",
+  "ida": "2027-03-11",
+  "link": "https://kiwi.com/u/pn6sqvg",
+  "opcoes": [
+    {
+      "cia": "LATAM Airlines",
+      "datas": "11 de mar. – 15 de mar.",
+      "duracao": "2h 5min",
+      "escalas": "Direto",
+      "ida": "2027-03-11",
+      "link": "https://kiwi.com/u/pn6sqvg",
+      "nota": "Sem mala despachada",
+      "preco": 1067,
+      "volta": "2027-03-15"
+    },
+    {
+      "cia": "LATAM Airlines",
+      "datas": "03 de mar. – 08 de mar.",
+      "duracao": "2h 10min",
+      "escalas": "Direto",
+      "ida": "2027-03-03",
+      "link": "https://kiwi.com/u/byds4t",
+      "nota": "Sem mala despachada",
+      "preco": 1067,
+      "volta": "2027-03-08"
+    },
+    {
+      "cia": "LATAM Airlines",
+      "datas": "26 de fev. – 02 de mar.",
+      "duracao": "2h 5min",
+      "escalas": "Direto",
+      "ida": "2027-02-26",
+      "link": "https://kiwi.com/u/9h9c9z",
+      "nota": "Sem mala despachada",
+      "preco": 1068,
+      "volta": "2027-03-02"
+    }
+  ],
+  "preco": 1067,
+  "volta": "2027-03-15"
+}

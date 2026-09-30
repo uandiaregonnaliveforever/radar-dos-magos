@@ -1,0 +1,16 @@
+{
+  "cabine": "Econômica",
+  "datas": "27 de nov. – 3 de dez.",
+  "destino": "Cidade do Cabo",
+  "detalhe": "Preço normal para a rota (mediana 60 dias R$ 4.021).",
+  "encontrada_em": "2026-09-30T15:00:00-03:00",
+  "excepcional": false,
+  "fonte": "Google Voos",
+  "link": "https://www.google.com/travel/flights?q=Flights%20to%20CPT%20from%20SAO%20on%202026-11-27%20through%202026-12-03%20nonstop&hl=pt-BR&curr=BRL",
+  "notificado": false,
+  "preco_normal": 3950,
+  "preco_pessoa": 3809,
+  "status": "expirada",
+  "tipo": "dinheiro",
+  "titulo": "Cidade do Cabo direto · LATAM"
+}

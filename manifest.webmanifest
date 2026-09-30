@@ -1,0 +1,5 @@
+{
+  "name": "Radar dos Magos", "short_name": "Radar", "start_url": "./", "display": "standalone",
+  "background_color": "#bfe6ff", "theme_color": "#3fa9f5",
+  "icons": [{"src": "icone-192.png", "sizes": "192x192", "type": "image/png"}, {"src": "icone-512.png", "sizes": "512x512", "type": "image/png"}]
+}

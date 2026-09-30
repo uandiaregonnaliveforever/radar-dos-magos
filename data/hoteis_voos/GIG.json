@@ -1,0 +1,45 @@
+{
+  "atualizado_em": "2026-09-30T20:31:32.091Z",
+  "cia": "Gol Transportes Aéreos",
+  "datas": "15 de fev. – 20 de fev.",
+  "escalas": "Direto",
+  "ida": "2027-02-15",
+  "link": "https://kiwi.com/u/bgz5yw",
+  "opcoes": [
+    {
+      "cia": "Gol Transportes Aéreos",
+      "datas": "15 de fev. – 20 de fev.",
+      "duracao": "1h 5min",
+      "escalas": "Direto",
+      "ida": "2027-02-15",
+      "link": "https://kiwi.com/u/bgz5yw",
+      "nota": "Sem mala despachada",
+      "preco": 638,
+      "volta": "2027-02-20"
+    },
+    {
+      "cia": "Gol Transportes Aéreos",
+      "datas": "22 de fev. – 26 de fev.",
+      "duracao": "1h 5min",
+      "escalas": "Direto",
+      "ida": "2027-02-22",
+      "link": "https://kiwi.com/u/fkq85z",
+      "nota": "Sem mala despachada",
+      "preco": 647,
+      "volta": "2027-02-26"
+    },
+    {
+      "cia": "Gol Transportes Aéreos",
+      "datas": "22 de jan. – 26 de jan.",
+      "duracao": "1h",
+      "escalas": "Direto",
+      "ida": "2027-01-22",
+      "link": "https://kiwi.com/u/h2yunq",
+      "nota": "Sem mala despachada",
+      "preco": 655,
+      "volta": "2027-01-26"
+    }
+  ],
+  "preco": 638,
+  "volta": "2027-02-20"
+}

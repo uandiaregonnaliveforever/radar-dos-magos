@@ -1,0 +1,45 @@
+{
+  "atualizado_em": "2026-09-30T20:31:31.381Z",
+  "cia": "Azul",
+  "datas": "01 de abr. – 08 de abr.",
+  "escalas": "Direto",
+  "ida": "2027-04-01",
+  "link": "https://kiwi.com/u/gffhc7",
+  "opcoes": [
+    {
+      "cia": "Azul",
+      "datas": "01 de abr. – 08 de abr.",
+      "duracao": "2h 50min",
+      "escalas": "Direto",
+      "ida": "2027-04-01",
+      "link": "https://kiwi.com/u/gffhc7",
+      "nota": "Sem mala despachada",
+      "preco": 945,
+      "volta": "2027-04-08"
+    },
+    {
+      "cia": "Azul",
+      "datas": "01 de nov. – 08 de nov.",
+      "duracao": "2h 50min",
+      "escalas": "Direto",
+      "ida": "2026-11-01",
+      "link": "https://kiwi.com/u/6nsmtfz",
+      "nota": "Sem mala despachada",
+      "preco": 1000,
+      "volta": "2026-11-08"
+    },
+    {
+      "cia": "Azul",
+      "datas": "03 de nov. – 08 de nov.",
+      "duracao": "2h 50min",
+      "escalas": "Direto",
+      "ida": "2026-11-03",
+      "link": "https://kiwi.com/u/muygtz",
+      "nota": "Sem mala despachada",
+      "preco": 1000,
+      "volta": "2026-11-08"
+    }
+  ],
+  "preco": 945,
+  "volta": "2027-04-08"
+}

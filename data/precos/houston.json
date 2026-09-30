@@ -1,0 +1,18 @@
+{
+  "atualizado_em": "2026-09-30T16:10:00-03:00",
+  "duracao": "10h 10 min",
+  "escalas": "Direto",
+  "fonte": "Google Voos (Explorar, só diretos)",
+  "historico": [
+    {
+      "datas": "21 – 28 de jan. de 2027",
+      "escalas": "Direto",
+      "preco": 6726,
+      "t": "2026-09-30T16:10:00-03:00"
+    }
+  ],
+  "nome": "Houston",
+  "regiao": "EUA",
+  "ultimas_datas": "21 – 28 de jan. de 2027",
+  "ultimo_preco": 6726
+}

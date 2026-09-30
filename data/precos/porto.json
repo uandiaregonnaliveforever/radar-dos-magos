@@ -1,0 +1,22 @@
+{
+  "atualizado_em": "2026-09-30T16:10:00-03:00",
+  "duracao": "10h 10 min",
+  "escalas": "Direto",
+  "faixa_atualizada_em": "2026-09-30T16:10:00-03:00",
+  "faixa_datas": "26 de nov. – 3 de dez.",
+  "faixa_max": 6800,
+  "faixa_min": 4600,
+  "fonte": "Google Voos (Explorar, só diretos)",
+  "historico": [
+    {
+      "datas": "26 de nov. – 3 de dez.",
+      "escalas": "Direto",
+      "preco": 4172,
+      "t": "2026-09-30T16:10:00-03:00"
+    }
+  ],
+  "nome": "Porto",
+  "regiao": "Europa",
+  "ultimas_datas": "26 de nov. – 3 de dez.",
+  "ultimo_preco": 4172
+}

@@ -1,0 +1,23 @@
+{
+  "atualizado_em": "2026-09-30T20:31:30.509Z",
+  "cia": "Azul",
+  "datas": "25 de nov. – 29 de nov.",
+  "escalas": "Direto",
+  "ida": "2026-11-25",
+  "link": "https://kiwi.com/u/st37sxf",
+  "opcoes": [
+    {
+      "cia": "Azul",
+      "datas": "25 de nov. – 29 de nov.",
+      "duracao": "1h 40min",
+      "escalas": "Direto",
+      "ida": "2026-11-25",
+      "link": "https://kiwi.com/u/st37sxf",
+      "nota": "Sem mala despachada",
+      "preco": 959,
+      "volta": "2026-11-29"
+    }
+  ],
+  "preco": 959,
+  "volta": "2026-11-29"
+}

@@ -1,0 +1,30 @@
+{
+  "atualizado_em": "2026-09-30T16:10:00-03:00",
+  "duracao": "10h 35 min",
+  "escalas": "Direto",
+  "fonte": "Google Voos (Explorar, só diretos)",
+  "historico": [
+    {
+      "datas": "25 – 31 de mar. de 2027",
+      "escalas": "Direto",
+      "preco": 4723,
+      "t": "2026-09-30T13:40:00-03:00"
+    },
+    {
+      "datas": "25 – 31 de mar. de 2027",
+      "escalas": "Direto",
+      "preco": 4723,
+      "t": "2026-09-30T15:00:00-03:00"
+    },
+    {
+      "datas": "25 – 31 de mar. de 2027",
+      "escalas": "Direto",
+      "preco": 4723,
+      "t": "2026-09-30T16:10:00-03:00"
+    }
+  ],
+  "nome": "Barcelona",
+  "regiao": "Europa",
+  "ultimas_datas": "25 – 31 de mar. de 2027",
+  "ultimo_preco": 4723
+}

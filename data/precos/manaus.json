@@ -1,0 +1,21 @@
+{
+  "atualizado_em": "2026-09-30T18:30:00-03:00",
+  "cia": "Azul",
+  "duracao": "3h 45min",
+  "escalas": "Direto",
+  "fonte": "Kiwi.com",
+  "historico": [
+    {
+      "datas": "24 de mar. – 1 de abr. de 2027",
+      "escalas": "Direto",
+      "fonte": "Kiwi.com",
+      "preco": 1658,
+      "t": "2026-09-30T18:30:00-03:00"
+    }
+  ],
+  "link_kiwi": "https://kiwi.com/u/ubkwwg",
+  "nome": "Manaus",
+  "regiao": "Brasil",
+  "ultimas_datas": "24 de mar. – 1 de abr. de 2027",
+  "ultimo_preco": 1658
+}

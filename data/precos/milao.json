@@ -1,0 +1,18 @@
+{
+  "atualizado_em": "2026-09-30T16:10:00-03:00",
+  "duracao": "11h 20 min",
+  "escalas": "Direto",
+  "fonte": "Google Voos (Explorar, só diretos)",
+  "historico": [
+    {
+      "datas": "19 – 26 de nov.",
+      "escalas": "Direto",
+      "preco": 4303,
+      "t": "2026-09-30T16:10:00-03:00"
+    }
+  ],
+  "nome": "Milão",
+  "regiao": "Europa",
+  "ultimas_datas": "19 – 26 de nov.",
+  "ultimo_preco": 4303
+}

@@ -1,0 +1,16 @@
+{
+  "cabine": "Econômica",
+  "datas": "26 de nov. – 3 de dez.",
+  "destino": "Porto",
+  "detalhe": "9% abaixo do normal (R$ 4.600+). Fim de nov.",
+  "encontrada_em": "2026-09-30T16:10:00-03:00",
+  "excepcional": false,
+  "fonte": "Google Voos",
+  "link": "https://www.google.com/travel/flights?q=Flights%20to%20OPO%20from%20SAO%20on%202026-11-26%20through%202026-12-03%20nonstop&hl=pt-BR&curr=BRL",
+  "notificado": false,
+  "preco_normal": 4600,
+  "preco_pessoa": 4172,
+  "status": "ativa",
+  "tipo": "dinheiro",
+  "titulo": "Porto direto · TAP"
+}

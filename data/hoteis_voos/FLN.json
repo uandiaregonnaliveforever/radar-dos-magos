@@ -1,0 +1,34 @@
+{
+  "atualizado_em": "2026-09-30T20:31:25.389Z",
+  "cia": "Gol Transportes Aéreos",
+  "datas": "12 de dez. – 18 de dez.",
+  "escalas": "Direto",
+  "ida": "2026-12-12",
+  "link": "https://kiwi.com/u/zc92nn",
+  "opcoes": [
+    {
+      "cia": "Gol Transportes Aéreos",
+      "datas": "12 de dez. – 18 de dez.",
+      "duracao": "1h 10min",
+      "escalas": "Direto",
+      "ida": "2026-12-12",
+      "link": "https://kiwi.com/u/zc92nn",
+      "nota": "Sem mala despachada",
+      "preco": 615,
+      "volta": "2026-12-18"
+    },
+    {
+      "cia": "Gol Transportes Aéreos",
+      "datas": "19 de dez. – 24 de dez.",
+      "duracao": "1h 10min",
+      "escalas": "Direto",
+      "ida": "2026-12-19",
+      "link": "https://kiwi.com/u/2uvdh4",
+      "nota": "Sem mala despachada",
+      "preco": 621,
+      "volta": "2026-12-24"
+    }
+  ],
+  "preco": 615,
+  "volta": "2026-12-18"
+}

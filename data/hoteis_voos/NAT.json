@@ -1,0 +1,45 @@
+{
+  "atualizado_em": "2026-09-30T20:31:28.292Z",
+  "cia": "Azul + Gol Transportes Aéreos",
+  "datas": "15 de mar. – 22 de mar.",
+  "escalas": "Direto",
+  "ida": "2027-03-15",
+  "link": "https://kiwi.com/u/vmndkh",
+  "opcoes": [
+    {
+      "cia": "Azul + Gol Transportes Aéreos",
+      "datas": "15 de mar. – 22 de mar.",
+      "duracao": "3h 15min",
+      "escalas": "Direto",
+      "ida": "2027-03-15",
+      "link": "https://kiwi.com/u/vmndkh",
+      "nota": "Sem mala despachada",
+      "preco": 983,
+      "volta": "2027-03-22"
+    },
+    {
+      "cia": "Gol Transportes Aéreos",
+      "datas": "19 de jan. – 26 de jan.",
+      "duracao": "3h 25min",
+      "escalas": "Direto",
+      "ida": "2027-01-19",
+      "link": "https://kiwi.com/u/b9c6yp",
+      "nota": "Sem mala despachada",
+      "preco": 983,
+      "volta": "2027-01-26"
+    },
+    {
+      "cia": "Gol Transportes Aéreos",
+      "datas": "08 de jan. – 15 de jan.",
+      "duracao": "3h 25min",
+      "escalas": "Direto",
+      "ida": "2027-01-08",
+      "link": "https://kiwi.com/u/y54637",
+      "nota": "Sem mala despachada",
+      "preco": 983,
+      "volta": "2027-01-15"
+    }
+  ],
+  "preco": 983,
+  "volta": "2027-03-22"
+}

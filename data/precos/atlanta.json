@@ -1,0 +1,18 @@
+{
+  "atualizado_em": "2026-09-30T16:10:00-03:00",
+  "duracao": "10h 3 min",
+  "escalas": "Direto",
+  "fonte": "Google Voos (Explorar, só diretos)",
+  "historico": [
+    {
+      "datas": "28 de jan. – 4 de fev. de 2027",
+      "escalas": "Direto",
+      "preco": 8031,
+      "t": "2026-09-30T16:10:00-03:00"
+    }
+  ],
+  "nome": "Atlanta",
+  "regiao": "EUA",
+  "ultimas_datas": "28 de jan. – 4 de fev. de 2027",
+  "ultimo_preco": 8031
+}

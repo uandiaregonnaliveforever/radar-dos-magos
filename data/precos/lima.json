@@ -1,0 +1,21 @@
+{
+  "atualizado_em": "2026-09-30T18:30:00-03:00",
+  "cia": "Sky Airline",
+  "duracao": "5h",
+  "escalas": "Direto",
+  "fonte": "Kiwi.com",
+  "historico": [
+    {
+      "datas": "10 – 17 de jan. de 2027",
+      "escalas": "Direto",
+      "fonte": "Kiwi.com",
+      "preco": 2306,
+      "t": "2026-09-30T18:30:00-03:00"
+    }
+  ],
+  "link_kiwi": "https://kiwi.com/u/7prucv6",
+  "nome": "Lima",
+  "regiao": "América Latina",
+  "ultimas_datas": "10 – 17 de jan. de 2027",
+  "ultimo_preco": 2306
+}

@@ -1,0 +1,21 @@
+{
+  "atualizado_em": "2026-09-30T18:30:00-03:00",
+  "cia": "Azul",
+  "duracao": "1h 40min",
+  "escalas": "Direto",
+  "fonte": "Kiwi.com",
+  "historico": [
+    {
+      "datas": "25 – 30 de nov.",
+      "escalas": "Direto",
+      "fonte": "Kiwi.com",
+      "preco": 959,
+      "t": "2026-09-30T18:30:00-03:00"
+    }
+  ],
+  "link_kiwi": "https://kiwi.com/u/yhd3723",
+  "nome": "Campo Grande",
+  "regiao": "Brasil",
+  "ultimas_datas": "25 – 30 de nov.",
+  "ultimo_preco": 959
+}

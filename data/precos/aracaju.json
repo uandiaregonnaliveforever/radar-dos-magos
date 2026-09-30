@@ -1,0 +1,21 @@
+{
+  "atualizado_em": "2026-09-30T18:30:00-03:00",
+  "cia": "Azul",
+  "duracao": "2h 35min",
+  "escalas": "Direto",
+  "fonte": "Kiwi.com",
+  "historico": [
+    {
+      "datas": "12 – 20 de dez.",
+      "escalas": "Direto",
+      "fonte": "Kiwi.com",
+      "preco": 903,
+      "t": "2026-09-30T18:30:00-03:00"
+    }
+  ],
+  "link_kiwi": "https://kiwi.com/u/g2n5rkq",
+  "nome": "Aracaju",
+  "regiao": "Brasil",
+  "ultimas_datas": "12 – 20 de dez.",
+  "ultimo_preco": 903
+}

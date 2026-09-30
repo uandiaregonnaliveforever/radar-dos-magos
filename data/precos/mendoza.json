@@ -1,0 +1,21 @@
+{
+  "atualizado_em": "2026-09-30T18:30:00-03:00",
+  "cia": "LATAM",
+  "duracao": "3h 50min",
+  "escalas": "Direto",
+  "fonte": "Kiwi.com",
+  "historico": [
+    {
+      "datas": "24 de nov. – 1 de dez.",
+      "escalas": "Direto",
+      "fonte": "Kiwi.com",
+      "preco": 2264,
+      "t": "2026-09-30T18:30:00-03:00"
+    }
+  ],
+  "link_kiwi": "https://kiwi.com/u/nwqn9g",
+  "nome": "Mendoza",
+  "regiao": "América Latina",
+  "ultimas_datas": "24 de nov. – 1 de dez.",
+  "ultimo_preco": 2264
+}

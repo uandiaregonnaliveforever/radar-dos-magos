@@ -1,0 +1,461 @@
+{
+  "atualizado_em": "2026-09-30T16:10:00-03:00",
+  "duracao": "10h 55 min",
+  "escalas": "Direto",
+  "faixa_atualizada_em": "2026-09-30T17:00:00-03:00",
+  "faixa_datas": "5 – 12 de nov.",
+  "faixa_max": 5200,
+  "faixa_min": 3600,
+  "fonte": "Google Voos (Explorar, só diretos)",
+  "historico": [
+    {
+      "datas": "5 – 12 de nov.",
+      "escalas": "Direto",
+      "fonte": "Google (60 dias)",
+      "preco": 4061,
+      "t": "2026-08-01T12:00:00-03:00"
+    },
+    {
+      "datas": "5 – 12 de nov.",
+      "escalas": "Direto",
+      "fonte": "Google (60 dias)",
+      "preco": 4058,
+      "t": "2026-08-02T12:00:00-03:00"
+    },
+    {
+      "datas": "5 – 12 de nov.",
+      "escalas": "Direto",
+      "fonte": "Google (60 dias)",
+      "preco": 4058,
+      "t": "2026-08-03T12:00:00-03:00"
+    },
+    {
+      "datas": "5 – 12 de nov.",
+      "escalas": "Direto",
+      "fonte": "Google (60 dias)",
+      "preco": 4076,
+      "t": "2026-08-04T12:00:00-03:00"
+    },
+    {
+      "datas": "5 – 12 de nov.",
+      "escalas": "Direto",
+      "fonte": "Google (60 dias)",
+      "preco": 4085,
+      "t": "2026-08-05T12:00:00-03:00"
+    },
+    {
+      "datas": "5 – 12 de nov.",
+      "escalas": "Direto",
+      "fonte": "Google (60 dias)",
+      "preco": 4085,
+      "t": "2026-08-06T12:00:00-03:00"
+    },
+    {
+      "datas": "5 – 12 de nov.",
+      "escalas": "Direto",
+      "fonte": "Google (60 dias)",
+      "preco": 4079,
+      "t": "2026-08-07T12:00:00-03:00"
+    },
+    {
+      "datas": "5 – 12 de nov.",
+      "escalas": "Direto",
+      "fonte": "Google (60 dias)",
+      "preco": 4071,
+      "t": "2026-08-08T12:00:00-03:00"
+    },
+    {
+      "datas": "5 – 12 de nov.",
+      "escalas": "Direto",
+      "fonte": "Google (60 dias)",
+      "preco": 4071,
+      "t": "2026-08-09T12:00:00-03:00"
+    },
+    {
+      "datas": "5 – 12 de nov.",
+      "escalas": "Direto",
+      "fonte": "Google (60 dias)",
+      "preco": 4081,
+      "t": "2026-08-10T12:00:00-03:00"
+    },
+    {
+      "datas": "5 – 12 de nov.",
+      "escalas": "Direto",
+      "fonte": "Google (60 dias)",
+      "preco": 4081,
+      "t": "2026-08-11T12:00:00-03:00"
+    },
+    {
+      "datas": "5 – 12 de nov.",
+      "escalas": "Direto",
+      "fonte": "Google (60 dias)",
+      "preco": 4656,
+      "t": "2026-08-12T12:00:00-03:00"
+    },
+    {
+      "datas": "5 – 12 de nov.",
+      "escalas": "Direto",
+      "fonte": "Google (60 dias)",
+      "preco": 4669,
+      "t": "2026-08-13T12:00:00-03:00"
+    },
+    {
+      "datas": "5 – 12 de nov.",
+      "escalas": "Direto",
+      "fonte": "Google (60 dias)",
+      "preco": 4684,
+      "t": "2026-08-14T12:00:00-03:00"
+    },
+    {
+      "datas": "5 – 12 de nov.",
+      "escalas": "Direto",
+      "fonte": "Google (60 dias)",
+      "preco": 4729,
+      "t": "2026-08-15T12:00:00-03:00"
+    },
+    {
+      "datas": "5 – 12 de nov.",
+      "escalas": "Direto",
+      "fonte": "Google (60 dias)",
+      "preco": 4691,
+      "t": "2026-08-16T12:00:00-03:00"
+    },
+    {
+      "datas": "5 – 12 de nov.",
+      "escalas": "Direto",
+      "fonte": "Google (60 dias)",
+      "preco": 4705,
+      "t": "2026-08-17T12:00:00-03:00"
+    },
+    {
+      "datas": "5 – 12 de nov.",
+      "escalas": "Direto",
+      "fonte": "Google (60 dias)",
+      "preco": 4694,
+      "t": "2026-08-18T12:00:00-03:00"
+    },
+    {
+      "datas": "5 – 12 de nov.",
+      "escalas": "Direto",
+      "fonte": "Google (60 dias)",
+      "preco": 4685,
+      "t": "2026-08-19T12:00:00-03:00"
+    },
+    {
+      "datas": "5 – 12 de nov.",
+      "escalas": "Direto",
+      "fonte": "Google (60 dias)",
+      "preco": 4710,
+      "t": "2026-08-20T12:00:00-03:00"
+    },
+    {
+      "datas": "5 – 12 de nov.",
+      "escalas": "Direto",
+      "fonte": "Google (60 dias)",
+      "preco": 4662,
+      "t": "2026-08-21T12:00:00-03:00"
+    },
+    {
+      "datas": "5 – 12 de nov.",
+      "escalas": "Direto",
+      "fonte": "Google (60 dias)",
+      "preco": 4647,
+      "t": "2026-08-22T12:00:00-03:00"
+    },
+    {
+      "datas": "5 – 12 de nov.",
+      "escalas": "Direto",
+      "fonte": "Google (60 dias)",
+      "preco": 4642,
+      "t": "2026-08-23T12:00:00-03:00"
+    },
+    {
+      "datas": "5 – 12 de nov.",
+      "escalas": "Direto",
+      "fonte": "Google (60 dias)",
+      "preco": 4012,
+      "t": "2026-08-24T12:00:00-03:00"
+    },
+    {
+      "datas": "5 – 12 de nov.",
+      "escalas": "Direto",
+      "fonte": "Google (60 dias)",
+      "preco": 4646,
+      "t": "2026-08-25T12:00:00-03:00"
+    },
+    {
+      "datas": "5 – 12 de nov.",
+      "escalas": "Direto",
+      "fonte": "Google (60 dias)",
+      "preco": 4641,
+      "t": "2026-08-26T12:00:00-03:00"
+    },
+    {
+      "datas": "5 – 12 de nov.",
+      "escalas": "Direto",
+      "fonte": "Google (60 dias)",
+      "preco": 4634,
+      "t": "2026-08-27T12:00:00-03:00"
+    },
+    {
+      "datas": "5 – 12 de nov.",
+      "escalas": "Direto",
+      "fonte": "Google (60 dias)",
+      "preco": 4654,
+      "t": "2026-08-28T12:00:00-03:00"
+    },
+    {
+      "datas": "5 – 12 de nov.",
+      "escalas": "Direto",
+      "fonte": "Google (60 dias)",
+      "preco": 4662,
+      "t": "2026-08-29T12:00:00-03:00"
+    },
+    {
+      "datas": "5 – 12 de nov.",
+      "escalas": "Direto",
+      "fonte": "Google (60 dias)",
+      "preco": 4656,
+      "t": "2026-08-30T12:00:00-03:00"
+    },
+    {
+      "datas": "5 – 12 de nov.",
+      "escalas": "Direto",
+      "fonte": "Google (60 dias)",
+      "preco": 4643,
+      "t": "2026-08-31T12:00:00-03:00"
+    },
+    {
+      "datas": "5 – 12 de nov.",
+      "escalas": "Direto",
+      "fonte": "Google (60 dias)",
+      "preco": 4392,
+      "t": "2026-09-01T12:00:00-03:00"
+    },
+    {
+      "datas": "5 – 12 de nov.",
+      "escalas": "Direto",
+      "fonte": "Google (60 dias)",
+      "preco": 4590,
+      "t": "2026-09-02T12:00:00-03:00"
+    },
+    {
+      "datas": "5 – 12 de nov.",
+      "escalas": "Direto",
+      "fonte": "Google (60 dias)",
+      "preco": 4590,
+      "t": "2026-09-03T12:00:00-03:00"
+    },
+    {
+      "datas": "5 – 12 de nov.",
+      "escalas": "Direto",
+      "fonte": "Google (60 dias)",
+      "preco": 4622,
+      "t": "2026-09-04T12:00:00-03:00"
+    },
+    {
+      "datas": "5 – 12 de nov.",
+      "escalas": "Direto",
+      "fonte": "Google (60 dias)",
+      "preco": 4633,
+      "t": "2026-09-05T12:00:00-03:00"
+    },
+    {
+      "datas": "5 – 12 de nov.",
+      "escalas": "Direto",
+      "fonte": "Google (60 dias)",
+      "preco": 4632,
+      "t": "2026-09-06T12:00:00-03:00"
+    },
+    {
+      "datas": "5 – 12 de nov.",
+      "escalas": "Direto",
+      "fonte": "Google (60 dias)",
+      "preco": 4632,
+      "t": "2026-09-07T12:00:00-03:00"
+    },
+    {
+      "datas": "5 – 12 de nov.",
+      "escalas": "Direto",
+      "fonte": "Google (60 dias)",
+      "preco": 4601,
+      "t": "2026-09-08T12:00:00-03:00"
+    },
+    {
+      "datas": "5 – 12 de nov.",
+      "escalas": "Direto",
+      "fonte": "Google (60 dias)",
+      "preco": 4602,
+      "t": "2026-09-09T12:00:00-03:00"
+    },
+    {
+      "datas": "5 – 12 de nov.",
+      "escalas": "Direto",
+      "fonte": "Google (60 dias)",
+      "preco": 4597,
+      "t": "2026-09-10T12:00:00-03:00"
+    },
+    {
+      "datas": "5 – 12 de nov.",
+      "escalas": "Direto",
+      "fonte": "Google (60 dias)",
+      "preco": 4575,
+      "t": "2026-09-11T12:00:00-03:00"
+    },
+    {
+      "datas": "5 – 12 de nov.",
+      "escalas": "Direto",
+      "fonte": "Google (60 dias)",
+      "preco": 4611,
+      "t": "2026-09-12T12:00:00-03:00"
+    },
+    {
+      "datas": "5 – 12 de nov.",
+      "escalas": "Direto",
+      "fonte": "Google (60 dias)",
+      "preco": 4610,
+      "t": "2026-09-13T12:00:00-03:00"
+    },
+    {
+      "datas": "5 – 12 de nov.",
+      "escalas": "Direto",
+      "fonte": "Google (60 dias)",
+      "preco": 4593,
+      "t": "2026-09-14T12:00:00-03:00"
+    },
+    {
+      "datas": "5 – 12 de nov.",
+      "escalas": "Direto",
+      "fonte": "Google (60 dias)",
+      "preco": 4606,
+      "t": "2026-09-15T12:00:00-03:00"
+    },
+    {
+      "datas": "5 – 12 de nov.",
+      "escalas": "Direto",
+      "fonte": "Google (60 dias)",
+      "preco": 4617,
+      "t": "2026-09-16T12:00:00-03:00"
+    },
+    {
+      "datas": "5 – 12 de nov.",
+      "escalas": "Direto",
+      "fonte": "Google (60 dias)",
+      "preco": 4603,
+      "t": "2026-09-17T12:00:00-03:00"
+    },
+    {
+      "datas": "5 – 12 de nov.",
+      "escalas": "Direto",
+      "fonte": "Google (60 dias)",
+      "preco": 4603,
+      "t": "2026-09-18T12:00:00-03:00"
+    },
+    {
+      "datas": "5 – 12 de nov.",
+      "escalas": "Direto",
+      "fonte": "Google (60 dias)",
+      "preco": 4891,
+      "t": "2026-09-19T12:00:00-03:00"
+    },
+    {
+      "datas": "5 – 12 de nov.",
+      "escalas": "Direto",
+      "fonte": "Google (60 dias)",
+      "preco": 4895,
+      "t": "2026-09-20T12:00:00-03:00"
+    },
+    {
+      "datas": "5 – 12 de nov.",
+      "escalas": "Direto",
+      "fonte": "Google (60 dias)",
+      "preco": 4895,
+      "t": "2026-09-21T12:00:00-03:00"
+    },
+    {
+      "datas": "5 – 12 de nov.",
+      "escalas": "Direto",
+      "fonte": "Google (60 dias)",
+      "preco": 4369,
+      "t": "2026-09-22T12:00:00-03:00"
+    },
+    {
+      "datas": "5 – 12 de nov.",
+      "escalas": "Direto",
+      "fonte": "Google (60 dias)",
+      "preco": 4369,
+      "t": "2026-09-23T12:00:00-03:00"
+    },
+    {
+      "datas": "5 – 12 de nov.",
+      "escalas": "Direto",
+      "fonte": "Google (60 dias)",
+      "preco": 4370,
+      "t": "2026-09-24T12:00:00-03:00"
+    },
+    {
+      "datas": "5 – 12 de nov.",
+      "escalas": "Direto",
+      "fonte": "Google (60 dias)",
+      "preco": 4395,
+      "t": "2026-09-25T12:00:00-03:00"
+    },
+    {
+      "datas": "5 – 12 de nov.",
+      "escalas": "Direto",
+      "fonte": "Google (60 dias)",
+      "preco": 4425,
+      "t": "2026-09-26T12:00:00-03:00"
+    },
+    {
+      "datas": "5 – 12 de nov.",
+      "escalas": "Direto",
+      "fonte": "Google (60 dias)",
+      "preco": 4437,
+      "t": "2026-09-27T12:00:00-03:00"
+    },
+    {
+      "datas": "5 – 12 de nov.",
+      "escalas": "Direto",
+      "fonte": "Google (60 dias)",
+      "preco": 4437,
+      "t": "2026-09-28T12:00:00-03:00"
+    },
+    {
+      "datas": "5 – 12 de nov.",
+      "escalas": "Direto",
+      "fonte": "Google (60 dias)",
+      "preco": 4437,
+      "t": "2026-09-29T12:00:00-03:00"
+    },
+    {
+      "datas": "5 – 12 de nov.",
+      "escalas": "Direto",
+      "fonte": "Google (60 dias)",
+      "preco": 4455,
+      "t": "2026-09-30T12:00:00-03:00"
+    },
+    {
+      "datas": "7 – 16 de nov.",
+      "escalas": "Direto",
+      "preco": 4369,
+      "t": "2026-09-30T13:40:00-03:00"
+    },
+    {
+      "datas": "5 – 12 de nov.",
+      "escalas": "Direto",
+      "preco": 4455,
+      "t": "2026-09-30T15:00:00-03:00"
+    },
+    {
+      "datas": "7 – 16 de nov.",
+      "escalas": "Direto",
+      "preco": 4360,
+      "t": "2026-09-30T16:10:00-03:00"
+    }
+  ],
+  "nome": "Roma",
+  "regiao": "Europa",
+  "ultimas_datas": "7 – 16 de nov.",
+  "ultimo_preco": 4360
+}

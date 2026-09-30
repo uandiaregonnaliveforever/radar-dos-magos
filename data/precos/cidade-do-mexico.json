@@ -1,0 +1,21 @@
+{
+  "atualizado_em": "2026-09-30T18:30:00-03:00",
+  "cia": "AeroMexico",
+  "duracao": "9h 35min",
+  "escalas": "Direto",
+  "fonte": "Kiwi.com",
+  "historico": [
+    {
+      "datas": "11 – 19 de nov.",
+      "escalas": "Direto",
+      "fonte": "Kiwi.com",
+      "preco": 3321,
+      "t": "2026-09-30T18:30:00-03:00"
+    }
+  ],
+  "link_kiwi": "https://kiwi.com/u/m2gn7v",
+  "nome": "Cidade do México",
+  "regiao": "América Latina",
+  "ultimas_datas": "11 – 19 de nov.",
+  "ultimo_preco": 3321
+}

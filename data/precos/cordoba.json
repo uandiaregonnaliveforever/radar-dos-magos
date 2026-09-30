@@ -1,0 +1,21 @@
+{
+  "atualizado_em": "2026-09-30T18:30:00-03:00",
+  "cia": "LATAM",
+  "duracao": "3h 25min",
+  "escalas": "Direto",
+  "fonte": "Kiwi.com",
+  "historico": [
+    {
+      "datas": "7 – 14 de out.",
+      "escalas": "Direto",
+      "fonte": "Kiwi.com",
+      "preco": 2826,
+      "t": "2026-09-30T18:30:00-03:00"
+    }
+  ],
+  "link_kiwi": "https://kiwi.com/u/gwz3cy",
+  "nome": "Córdoba",
+  "regiao": "América Latina",
+  "ultimas_datas": "7 – 14 de out.",
+  "ultimo_preco": 2826
+}

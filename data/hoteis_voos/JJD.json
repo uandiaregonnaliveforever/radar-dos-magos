@@ -1,0 +1,45 @@
+{
+  "atualizado_em": "2026-09-30T20:31:29.238Z",
+  "cia": "LATAM Airlines + Gol Transportes Aéreos",
+  "datas": "05 de dez. – 11 de dez.",
+  "escalas": "Direto",
+  "ida": "2026-12-05",
+  "link": "https://kiwi.com/u/jp736c",
+  "opcoes": [
+    {
+      "cia": "LATAM Airlines + Gol Transportes Aéreos",
+      "datas": "05 de dez. – 11 de dez.",
+      "duracao": "3h 25min",
+      "escalas": "Direto",
+      "ida": "2026-12-05",
+      "link": "https://kiwi.com/u/jp736c",
+      "nota": "Sem mala despachada",
+      "preco": 1139,
+      "volta": "2026-12-11"
+    },
+    {
+      "cia": "LATAM Airlines + Gol Transportes Aéreos",
+      "datas": "04 de dez. – 11 de dez.",
+      "duracao": "3h 25min",
+      "escalas": "Direto",
+      "ida": "2026-12-04",
+      "link": "https://kiwi.com/u/b9m2kb",
+      "nota": "Sem mala despachada",
+      "preco": 1139,
+      "volta": "2026-12-11"
+    },
+    {
+      "cia": "LATAM Airlines",
+      "datas": "07 de dez. – 12 de dez.",
+      "duracao": "3h 25min",
+      "escalas": "Direto",
+      "ida": "2026-12-07",
+      "link": "https://kiwi.com/u/8qbzr6n",
+      "nota": "Sem mala despachada",
+      "preco": 1143,
+      "volta": "2026-12-12"
+    }
+  ],
+  "preco": 1139,
+  "volta": "2026-12-11"
+}

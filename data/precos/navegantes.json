@@ -1,0 +1,21 @@
+{
+  "atualizado_em": "2026-09-30T18:30:00-03:00",
+  "cia": "Azul",
+  "duracao": "1h 10min",
+  "escalas": "Direto",
+  "fonte": "Kiwi.com",
+  "historico": [
+    {
+      "datas": "31 de mar. – 9 de abr. de 2027",
+      "escalas": "Direto",
+      "fonte": "Kiwi.com",
+      "preco": 610,
+      "t": "2026-09-30T18:30:00-03:00"
+    }
+  ],
+  "link_kiwi": "https://kiwi.com/u/qq2ufj",
+  "nome": "Navegantes",
+  "regiao": "Brasil",
+  "ultimas_datas": "31 de mar. – 9 de abr. de 2027",
+  "ultimo_preco": 610
+}

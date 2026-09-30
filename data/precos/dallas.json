@@ -1,0 +1,18 @@
+{
+  "atualizado_em": "2026-09-30T16:10:00-03:00",
+  "duracao": "10h 30 min",
+  "escalas": "Direto",
+  "fonte": "Google Voos (Explorar, só diretos)",
+  "historico": [
+    {
+      "datas": "25 de fev. – 3 de mar. de 2027",
+      "escalas": "Direto",
+      "preco": 5400,
+      "t": "2026-09-30T16:10:00-03:00"
+    }
+  ],
+  "nome": "Dallas",
+  "regiao": "EUA",
+  "ultimas_datas": "25 de fev. – 3 de mar. de 2027",
+  "ultimo_preco": 5400
+}
