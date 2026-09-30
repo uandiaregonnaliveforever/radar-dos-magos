@@ -290,7 +290,8 @@ h2, .hl .city, .offer h3, summary { font-family: var(--display); font-weight: 60
 /* ===== Pesquisar ===== */
 .search-form { display: grid; grid-template-columns: minmax(0, 2fr) repeat(2, minmax(0, 1fr)) minmax(0, 1.2fr); gap: 12px; align-items: end; }
 .search-form label { display: grid; gap: 4px; font-size: 12px; font-weight: 700; color: var(--muted); }
-.search-form input[type=text], .search-form input[type=date], .search-form input[type=number], .search-form select { width: 100%; font-size: 14px; padding: 8px 10px; border-radius: 10px; }
+.search-form input[type=text], .search-form input[type=search], .search-form input[type=date], .search-form input[type=number], .search-form select { width: 100%; font-size: 14px; padding: 8px 10px; border-radius: 10px; }
+.search-form .sug { grid-column: 1 / -1; }
 .search-form .big { font-size: 17px; font-family: var(--display); font-weight: 600; }
 .nights { display: grid; grid-template-columns: 1fr auto 1fr; gap: 6px; align-items: center; }
 .row-opts { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; }
@@ -437,15 +438,15 @@ button, a, input, select, summary, .hcard, tr.click { -webkit-tap-highlight-colo
   .toolbar > div, .toolbar > label { width: 100%; }
   .chips { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; margin-inline: -14px; padding: 2px 14px 4px; scroll-padding-inline: 14px; }
   .chipbtn { font-size: 13.5px; padding: 8px 15px; min-height: 38px; white-space: nowrap; flex: none; }
-  select, input, .search-form input[type=text], .search-form input[type=date], .search-form input[type=number], .search-form select { font-size: 16px !important; min-height: 44px; border-radius: 12px; }
+  select, input, .search-form input[type=text], .search-form input[type=search], .search-form input[type=date], .search-form input[type=number], .search-form select { font-size: 16px !important; min-height: 44px; border-radius: 12px; }
   label.small.muted { display: flex; align-items: center; gap: 8px; font-size: 13px; }
   label.small.muted select { flex: 1; }
   .search-form { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 10px; }
   .search-form > label[for="q-dest"], .search-form > label:has(.nights), .row-opts { grid-column: 1 / -1; }
   .search-form label { font-size: 12.5px; }
-  .search-form .big { font-size: 18px !important; min-height: 50px; }
+  .search-form .big { font-size: 18px !important; min-height: 50px; -webkit-appearance: none; appearance: none; }
   .row-opts { gap: 10px; }
-  .row-opts .chips { width: calc(100% + 28px); }
+  .row-opts .chips, .search-form .sug { width: calc(100% + 28px); }
   .row-opts label.check { font-size: 15px; min-height: 44px; }
   .row-opts label.check input { width: 22px; height: 22px; min-height: 0; }
   .row-opts label.small.muted { flex: 1; }
@@ -562,7 +563,8 @@ button, a, input, select, summary, .hcard, tr.click { -webkit-tap-highlight-colo
   <section class="pane" id="p-pesquisar" role="tabpanel" aria-labelledby="t-pesquisar" hidden>
     <div class="panel">
       <form class="search-form" id="sform" novalidate>
-        <label for="q-dest">Para onde?<input id="q-dest" class="big" type="text" placeholder="Paris, Japão, Europa, Nordeste, Caribe, qualquer lugar…" autocomplete="off"></label>
+        <label for="q-dest">Para onde?<input id="q-dest" class="big" type="search" enterkeyhint="search" placeholder="Praia no Nordeste em dezembro, neve, Paris…" autocomplete="off"></label>
+        <div class="chips sug" id="q-sug" aria-label="Ideias"></div>
         <label for="q-de">Ida a partir de<input id="q-de" type="date"></label>
         <label for="q-ate">Ida até<input id="q-ate" type="date"></label>
         <label>Noites
@@ -575,7 +577,7 @@ button, a, input, select, summary, .hcard, tr.click { -webkit-tap-highlight-colo
           <button class="go-btn gel blue" id="q-go" type="submit">Pesquisar</button>
         </div>
       </form>
-      <p class="small muted" id="q-msg" role="status" style="margin:0">Digite uma cidade, um país ou um continente. A busca é ao vivo no Kiwi.com e leva poucos segundos.</p>
+      <p class="small muted" id="q-msg" role="status" style="margin:0">Escreva do seu jeito: um lugar, um clima, um mês. A busca é ao vivo e leva poucos segundos.</p>
     </div>
     <div class="panel" id="res-panel">
       <div class="res-head"><h2 id="res-title">Suas pesquisas</h2><div class="hist-chips" id="q-hist"></div></div>
@@ -879,6 +881,9 @@ const JANELAS = [["Próx. 30 dias", 30], ["Próx. 3 meses", 90], ["Próx. 6 mese
 $("q-janelas").innerHTML = JANELAS.map(([t, d]) => `<button type="button" class="chipbtn" data-d="${d}">${t}</button>`).join("");
 $("q-janelas").addEventListener("click", e => { const b = e.target.closest("[data-d]"); if (b) janela(+b.dataset.d); });
 janela(90);
+const SUG = ["Praia no Nordeste", "Caribe no Réveillon", "Neve em julho", "Vinho uma semana", "Europa em abril", "Fim de semana no Sul", "Natureza", "Qualquer lugar barato"];
+$("q-sug").innerHTML = SUG.map(t => `<button type="button" class="chipbtn" data-sug="${esc(t)}">${esc(t)}</button>`).join("");
+$("q-sug").addEventListener("click", e => { const b = e.target.closest("[data-sug]"); if (!b) return; $("q-dest").value = b.dataset.sug; $("sform").requestSubmit(); });
 const ST = { na_fila: "Na fila", pesquisando: "Pesquisando", pronto: "Pronto", erro: "Não deu certo" };
 
 Q.serieSel = {};
@@ -931,6 +936,71 @@ const TRAD = { "europa": "Europe", "america do norte": "North America", "america
   "montevideu": "Montevideo", "assuncao": "Asuncion", "bogota": "Bogota", "panama": "Panama City", "atenas": "Athens", "veneza": "Venice", "florenca": "Florence", "genebra": "Geneva", "bruxelas": "Brussels", "viena": "Vienna", "praga": "Prague", "copenhague": "Copenhagen", "estocolmo": "Stockholm", "sevilha": "Seville", "napoles": "Naples",
   "latam": "BUE,SCL,LIM,BOG,MVD,ASU,MDZ,COR,BRC,CTG,MDE,UIO,LPB,VVI,PTY,SJO,MEX,CUN,PUJ,SDQ,HAV,GUA,CCS", "latinoamerica": "BUE,SCL,LIM,BOG,MVD,ASU,MDZ,COR,BRC,CTG,MDE,UIO,LPB,VVI,PTY,SJO,MEX,CUN,PUJ,SDQ,HAV,GUA,CCS", "qualquer lugar": "anywhere", "qualquer": "anywhere", "mundo": "anywhere", "tanto faz": "anywhere" };
 const traduz = t => { const k = semAcento(t); return TRAD[k] || t.trim(); };
+/* Busca em linguagem natural: "praia no nordeste em dezembro", "neve", "vinho uma semana"… vira destinos + datas */
+const REG = {
+  nordeste: "SSA,REC,FOR,NAT,MCZ,JPA,AJU,SLZ,FEN,BPS,IOS,JJD", sul: "CWB,FLN,POA,NVT,IGU,JOI,CXJ", sudeste: "GIG,SDU,CNF,VIX",
+  norte: "MAO,BEL,STM,PMW", centrooeste: "BSB,CGR,CGB,GYN,BYO",
+  caribe: "CUN,PUJ,SDQ,AUA,CUR,SJU,MBJ,HAV,NAS", eua: "NYC,MIA,MCO,BOS,ORD,LAX,ATL,DFW,IAH,FLL",
+  europa: "LIS,OPO,MAD,BCN,PAR,ROM,MIL,LON,AMS,FRA,MUC,ZRH,BRU,IST",
+  latam: "BUE,SCL,LIM,BOG,MVD,ASU,MDZ,COR,BRC,CTG,MDE,UIO,LPB,VVI,PTY,SJO,MEX,CUN,PUJ,SDQ,HAV,USH,CJC,CUZ"
+};
+REG.brasil = [REG.nordeste, REG.sul, REG.sudeste, REG.norte, REG.centrooeste].join(",");
+const TEMAS = {
+  praia: "SSA,REC,FOR,NAT,MCZ,JPA,AJU,SLZ,FEN,BPS,IOS,JJD,FLN,NVT,GIG,VIX,CUN,PUJ,SDQ,AUA,CUR,SJU,MBJ,NAS,MIA,FLL,CTG,LIS,BCN",
+  ilha: "FEN,FLN,AUA,CUR,SJU,MBJ,NAS,HAV,SDQ,PUJ",
+  neve: "BRC,SCL,USH,MDZ,ZRH,MUC", montanha: "BRC,SCL,MDZ,ZRH,MUC,CXJ,CNF,CUZ,LPB",
+  vinho: "MDZ,SCL,LIS,OPO,CXJ,POA,MVD,BCN,ROM,PAR",
+  disney: "MCO", compras: "MIA,MCO,NYC,FLL,BUE,SCL,IAH",
+  cultura: "PAR,ROM,LIS,MAD,LON,NYC,MEX,LIM,CUZ,BUE,IST,AMS,BCN",
+  natureza: "MAO,CGR,BYO,IGU,CGB,BEL,SLZ,BRC,USH,CJC,CUZ", deserto: "CJC,SLZ,LPB",
+  romantico: "PAR,ROM,FEN,PUJ,CUN,LIS,BRC,MDZ,AUA", gastronomia: "LIM,MEX,ROM,PAR,LIS,MAD,BCN,SSA,BUE,SCL",
+  festa: "MIA,BCN,SSA,CUN,BUE,NYC,AMS,FLN", cidade: "NYC,PAR,LON,MAD,BCN,ROM,LIS,BUE,SCL,MEX,CHI,TOR"
+};
+const SIN = [
+  [/\bpraias?\b|\bmar\b|beira.?mar|litoral|\bsol\b|calor|verao/, "praia"], [/\bilhas?\b/, "ilha"],
+  [/\bneve\b|esqui|\bfrio\b|inverno/, "neve"], [/montanha|serra|trilha|trekking|andes/, "montanha"],
+  [/vinho|vinicola|enologia|adega/, "vinho"], [/disney|parque(s)? de diversao|universal/, "disney"],
+  [/compras|shopping|outlet|enxoval/, "compras"], [/cultura|museu|historia|arte|arquitetura/, "cultura"],
+  [/natureza|selva|floresta|ecoturismo|bicho|animais|cachoeira|pantanal|amazonia/, "natureza"], [/deserto|dunas|atacama/, "deserto"],
+  [/romantic|lua de mel|namorad|casal|a dois/, "romantico"], [/gastronomia|comer|comida|restaurante/, "gastronomia"],
+  [/festa|balada|night|noite agitada/, "festa"], [/cidade grande|metropole|urbano/, "cidade"]
+];
+const SREG = [
+  [/nordeste/, "nordeste"], [/(?<!america do )\bsul\b/, "sul"], [/sudeste/, "sudeste"], [/(?<!america do )\bnorte\b/, "norte"],
+  [/centro.?oeste/, "centrooeste"], [/caribe/, "caribe"], [/\beua\b|estados unidos|\busa\b|america do norte/, "eua"],
+  [/europa/, "europa"], [/america latina|latam|latinoamerica|america do sul/, "latam"], [/brasil|nacional/, "brasil"]
+];
+const MESES = ["janeiro", "fevereiro", "marco", "abril", "maio", "junho", "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"];
+function janelaMes(m) { const h = new Date(); let y = h.getFullYear(); if (m < h.getMonth() || (m === h.getMonth() && h.getDate() > 20)) y++; const a = new Date(y, m, 1), b = new Date(y, m + 1, 0); if (a < h) a.setTime(h.getTime() + 3 * 864e5); return [iso(a), iso(b)]; }
+function interpreta(txt) {
+  const t = " " + semAcento(txt).replace(/[^a-z0-9 ]/g, " ").replace(/\s+/g, " ") + " ";
+  const o = { entendi: [] };
+  const temas = SIN.filter(([r]) => r.test(t)).map(([, k]) => k), regs = SREG.filter(([r]) => r.test(t)).map(([, k]) => k);
+  const set = s => new Set(s.split(","));
+  let dest = null;
+  if (temas.length) { dest = set(TEMAS[temas[0]]); temas.slice(1).forEach(k => { const x = set(TEMAS[k]), i = [...dest].filter(c => x.has(c)); if (i.length) dest = new Set(i); }); }
+  if (regs.length) { const r = new Set(regs.flatMap(k => REG[k].split(","))); dest = dest ? new Set([...dest].filter(c => r.has(c))) : r; if (!dest.size) dest = r; }
+  if (dest && dest.size) { o.flyTo = [...dest].join(","); o.entendi.push([...temas.map(k => ({ praia: "praia", ilha: "ilha", neve: "neve", montanha: "montanha", vinho: "vinho", disney: "Disney", compras: "compras", cultura: "cultura", natureza: "natureza", deserto: "deserto", romantico: "romântico", gastronomia: "gastronomia", festa: "festa", cidade: "cidade grande" }[k])), ...regs.map(k => ({ nordeste: "Nordeste", sul: "Sul", sudeste: "Sudeste", norte: "Norte", centrooeste: "Centro-Oeste", caribe: "Caribe", eua: "EUA", europa: "Europa", latam: "América Latina", brasil: "Brasil" }[k]))].join(" + ")); }
+  if (/qualquer|tanto faz|barat|surpresa|mundo/.test(t) && !o.flyTo) { o.flyTo = "anywhere"; o.entendi.push("qualquer lugar"); }
+  const mi = MESES.findIndex(m => t.includes(" " + m + " "));
+  if (/carnaval/.test(t)) { o.de = "2027-02-04"; o.ate = "2027-02-07"; o.entendi.push("Carnaval"); }
+  else if (/reveillon|ano novo|virada/.test(t)) { const y = new Date().getMonth() === 11 && new Date().getDate() > 29 ? new Date().getFullYear() + 1 : new Date().getFullYear(); o.de = `${y}-12-26`; o.ate = `${y}-12-30`; o.entendi.push("Réveillon"); }
+  else if (/natal/.test(t)) { const y = new Date().getFullYear(); o.de = `${y}-12-19`; o.ate = `${y}-12-23`; o.entendi.push("Natal"); }
+  else if (/ferias de julho/.test(t)) { [o.de, o.ate] = janelaMes(6); o.entendi.push("julho"); }
+  else if (mi >= 0) { [o.de, o.ate] = janelaMes(mi); o.entendi.push(MESES[mi].replace("marco", "março")); }
+  let m;
+  if (/fim de semana|feriado|feriadao/.test(t)) { o.nmin = 2; o.nmax = 4; o.entendi.push("fim de semana"); }
+  else if (/duas semanas|15 dias|quinze dias/.test(t)) { o.nmin = 12; o.nmax = 16; o.entendi.push("2 semanas"); }
+  else if (/uma semana|1 semana|semaninha/.test(t)) { o.nmin = 6; o.nmax = 8; o.entendi.push("1 semana"); }
+  else if ((m = t.match(/ (\d{1,2}) (dias|noites)/))) { const n = +m[1]; o.nmin = Math.max(1, n - 2); o.nmax = n + 1; o.entendi.push(n + " " + m[2]); }
+  if (/executiva|business/.test(t)) { o.cabine = "Executiva"; o.entendi.push("executiva"); }
+  if (!o.flyTo) {
+    const limpo = semAcento(txt).replace(/\b(quero|queria|queremos|vamos|ir|viajar|viagem|conhecer|visitar|algum|lugar|pro|pros|pras|o|a|os|as|e|ate|em|no|na|nos|nas|de|do|da|para|pra|com|uma|um|semana|dias|noites|fim|executiva|carnaval|reveillon|natal|ferias|julho|janeiro|fevereiro|marco|abril|maio|junho|agosto|setembro|outubro|novembro|dezembro)\b/g, " ").replace(/\s+/g, " ").trim();
+    o.flyTo = traduz(limpo || txt);
+  }
+  return o;
+}
+
 /* Busca ao vivo no Kiwi.com (conector do próprio visitante); sem conector, vai para o robô */
 let MCP = null; let okPaisG = null;
 const ddmm = v => { const [y, m, d] = (v || "").split("-"); return d ? `${d}/${m}/${y}` : ""; };
@@ -986,6 +1056,10 @@ $("sform").addEventListener("submit", async e => {
   if (!consulta) { $("q-msg").textContent = "Diga para onde: uma cidade, um país ou um continente."; $("q-dest").focus(); return; }
   if (!DB) { $("q-msg").textContent = "O painel está sem conexão com os dados agora. Tente de novo em instantes."; return; }
   $("q-go").disabled = true;
+  const IT = interpreta(consulta);
+  if (IT.de) { $("q-de").value = IT.de; $("q-ate").value = IT.ate; }
+  if (IT.nmin) { $("q-nmin").value = IT.nmin; $("q-nmax").value = IT.nmax; }
+  if (IT.cabine) $("q-cab").value = IT.cabine;
   const nmin = Math.max(1, +$("q-nmin").value || 5), nmax = Math.max(nmin, +$("q-nmax").value || nmin);
   const base = { consulta, janela_de: $("q-de").value, janela_ate: $("q-ate").value, noites_min: nmin, noites_max: nmax, direto: $("q-direto").checked, cabine: $("q-cab").value, criado_em: new Date().toISOString() };
   let ref;
@@ -995,7 +1069,7 @@ $("sform").addEventListener("submit", async e => {
   if (MOB()) { try { document.activeElement.blur(); } catch (e) {} setTimeout(rolaRes, 80); }
   try {
     if (!MCP) throw { code: "server_not_connected" };
-    const input = { flyFrom: "São Paulo", flyTo: traduz(consulta), departureDate: ddmm(base.janela_de), departureDateTo: ddmm(base.janela_ate), nights_in_dst_from: nmin, nights_in_dst_to: nmax,
+    const input = { flyFrom: "São Paulo", flyTo: IT.flyTo, departureDate: ddmm(base.janela_de), departureDateTo: ddmm(base.janela_ate), nights_in_dst_from: nmin, nights_in_dst_to: nmax,
       adults: 1, currency: "BRL", locale: "pt", sort: "price", cabinClass: { "Econômica": "M", "Premium": "W", "Executiva": "C" }[base.cabine] || "M" };
     if (base.direto) input.max_sector_stopovers = 0;
     let [porCidade, todas] = await Promise.all([kiwi({ ...input, one_for_city: true }), kiwi(input)]);
@@ -1007,7 +1081,8 @@ $("sform").addEventListener("submit", async e => {
     const lista = (multi ? cidades : opts).sort((a, b) => a.preco - b.preco).slice(0, 25);
     const porData = {}; for (const o of opts.concat(cidades)) if (o.ida && (!porData[o.ida] || o.preco < porData[o.ida].preco)) porData[o.ida] = o;
     const best = lista[0];
-    const resumo = best ? `Mais barato: ${best.destino} por ${brl(best.preco)} por pessoa (${best.datas}, ${best.escalas.toLowerCase()}).` : naoRec ? `Não reconheci "${consulta}". Tente em inglês ou uma cidade.` : "Nenhum voo encontrado com esses filtros.";
+    const entendi = IT.entendi.length ? `Entendi: ${IT.entendi.join(" · ")}. ` : "";
+    const resumo = entendi + (best ? `Mais barato: ${best.destino} por ${brl(best.preco)} por pessoa (${best.datas}, ${best.escalas.toLowerCase()}).` : naoRec ? `Não reconheci "${consulta}". Tente em inglês ou uma cidade.` : "Nenhum voo encontrado com esses filtros.");
     await DB.doc("pesquisas/" + ref.id).update({ status: "pronto", etapa: "", resumo, opcoes: lista,
       grafico_destinos: multi ? cidades.map(c => ({ destino: c.destino, preco: c.preco, datas: c.datas, cia: c.cia })) : [],
       grafico_datas: Object.entries(porData).map(([data, o]) => ({ data, preco: o.preco, destino: o.destino, volta: o.volta })).slice(0, 90), fonte: "Kiwi.com (ao vivo)", concluido_em: new Date().toISOString() });
